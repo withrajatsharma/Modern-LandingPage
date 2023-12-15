@@ -24,9 +24,15 @@ height: 100%;
 #back{
     width: 100%;
     height: 100vh;
-    background-color: rgb(0, 0, 0);
+    /* background-color: rgb(0, 0, 0); */
+}
+#back img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 #top{
+    pointer-events: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -72,6 +78,7 @@ nav a{
     color: white;
     font-size: 12px;
     font-weight: 600;
+    pointer-events: all;
 }
 
 #hero{
@@ -93,8 +100,31 @@ nav a{
 }
 
 #hero-r{
-    min-width: 25%;
+    display:flex;
+    flex-direction: column;
+    align-items: end;
+    width: 20%;
    color: white;
+   /* background-color: rebeccapurple; */
+}
+#hero-r p{
+    text-align: right;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+#imgdiv{
+    height: 180px;
+    width: 100%;
+    margin: 20px 0 20px 0;
+    /* background-color: red; */
+    background-position: center;
+    background-size: cover;
+    background-image: url(https://images.unsplash.com/photo-1570158268183-d296b2892211?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+#hero-r p:nth-child(3){
+    /* color: red; */
+    margin-bottom: 80px;
 }
 
 .elem{
@@ -122,4 +152,6 @@ nav a{
     background-color: white;
     border: none;
     cursor: pointer;
+    pointer-events: all;
+
 }
